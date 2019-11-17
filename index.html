@@ -15,7 +15,7 @@
     <header>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 text-center">
             <img
               src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b270b.png"
               alt="moon"
@@ -25,30 +25,61 @@
             />
             <h2>Cheese: <span id="cheese-count"></span></h2>
           </div>
-          <div class="col-12">
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
             <div>
-              <button class="btn btn-info" onclick="buyPickAxe()"> 
+              <button class="btn btn-primary" onclick="buyPickAxe()">
                 PickAxe $<span id="pick-price"></span>
               </button>
-              <p>PickAxe Count: <span id="pick-count"></span></p>
-              <p>Multiplier: <span id="pick-multiplier"></span></p>
-            </div>
-            <div>
-              <button class="btn btn-info" onclick="buyGrater()">Grater $<span id="grater-price"></span></button>
-              <p>Grater Count: <span id="grater-count"></span></p>
-              <p>Multiplier: <span id="grater-multiplier"></span></p>
-            </div>
-            <div>
-              <button class="btn btn-info" onclick="buyMelter()">Melter $<span id="melter-price"></span></button>
-              <p>Melter Count:<span id="melter-count"></span></p>
-              <p>Multiplier:<span id="melter-multiplier"></span></p>
-            </div>
-            <div>
-              <button class="btn btn-info" onclick="buyRover()">Rover $<span id="rovers-price"></span></button>
-              <p>Rover Count: <span id="rovers-count"></span></p>
-              <p>Multiplier:<span id="rovers-multiplier"></span></p>
+              <p class="blue-text">
+                PickAxe Count: <span id="pick-count"></span>
+              </p>
+              <p class="blue-text">
+                Multiplier: <span id="pick-multiplier"></span>
+              </p>
             </div>
           </div>
+          <div class="col-6">
+            <div>
+              <button class="btn btn-secondary" onclick="buyGrater()">
+                Grater $<span id="grater-price"></span>
+              </button>
+              <p class="grey-text">
+                Grater Count: <span id="grater-count"></span>
+              </p>
+              <p class="grey-text">
+                Multiplier: <span id="grater-multiplier"></span>
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div>
+              <button class="btn btn-warning" onclick="buyMelter()">
+                Melter $<span id="melter-price"></span>
+              </button>
+              <p class="yellow-text">
+                Melter Count:<span id="melter-count"></span>
+              </p>
+              <p class="yellow-text">
+                Multiplier:<span id="melter-multiplier"></span>
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div>
+              <button class="btn btn-danger" onclick="buyRover()">
+                Rover $<span id="rovers-price"></span>
+              </button>
+              <p class="red-text">
+                Rover Count: <span id="rovers-count"></span>
+              </p>
+              <p class="red-text">
+                Multiplier:<span id="rovers-multiplier"></span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
