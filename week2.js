@@ -52,6 +52,14 @@ function update() {
     autoUpgrades.rovers.quantity;
   document.querySelector("#rovers-multiplier").innerText =
     autoUpgrades.rovers.multiplier;
+
+  document.querySelector("#pick-price").innerText =
+    clickUpgrades.pickaxes.price;
+  document.querySelector("#grater-price").innerText =
+    clickUpgrades.grater.price;
+  document.querySelector("#melter-price").innerText =
+    clickUpgrades.melter.price;
+  document.querySelector("#rovers-price").innerText = autoUpgrades.rovers.price;
 }
 function buyPickAxe() {
   if (cheese < clickUpgrades.pickaxes.price) {
