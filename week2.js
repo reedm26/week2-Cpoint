@@ -24,7 +24,10 @@ let autoUpgrades = {
 };
 let cheese = 0;
 // let pickCount = clickUpgrades.pickaxes.quantity;s
-
+let perClick =
+  clickUpgrades.pickaxes.multiplier +
+  clickUpgrades.grater.multiplier +
+  clickUpgrades.melter.multiplier;
 function mine() {
   cheese +=
     1 +
@@ -60,6 +63,9 @@ function update() {
   document.querySelector("#melter-price").innerText =
     clickUpgrades.melter.price;
   document.querySelector("#rovers-price").innerText = autoUpgrades.rovers.price;
+  document.querySelector("#per-second").innerText =
+    autoUpgrades.rovers.multiplier;
+  document.querySelector("#per-click").innerText = perClick;
 }
 function buyPickAxe() {
   if (cheese < clickUpgrades.pickaxes.price) {
@@ -103,11 +109,11 @@ function buyRover() {
   update();
 }
 function startTimer() {
-  let timer = setInterval(autoCount, 3000);
+  let timer = setInterval(autoCount, 1000);
 }
 function autoCount() {
   if (autoUpgrades.rovers.quantity > 0) {
-    cheese += 20;
+    cheese += autoUpgrades.rovers.quantity * 20;
     update();
   }
 }
