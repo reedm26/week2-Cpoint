@@ -24,6 +24,7 @@ let autoUpgrades = {
 };
 let cheese = 0;
 // let pickCount = clickUpgrades.pickaxes.quantity;s
+
 let perClick =
   clickUpgrades.pickaxes.multiplier +
   clickUpgrades.grater.multiplier +
@@ -75,6 +76,7 @@ function buyPickAxe() {
   clickUpgrades.pickaxes.quantity += 1;
   cheese -= clickUpgrades.pickaxes.price;
   clickUpgrades.pickaxes.price += 10;
+  perClick;
   update();
 }
 function buyGrater() {
