@@ -26,9 +26,12 @@ let cheese = 0;
 // let pickCount = clickUpgrades.pickaxes.quantity;s
 
 let perClick =
-  clickUpgrades.pickaxes.multiplier +
-  clickUpgrades.grater.multiplier +
-  clickUpgrades.melter.multiplier;
+  1 +
+  clickUpgrades.pickaxes.multiplier * clickUpgrades.pickaxes.quantity +
+  clickUpgrades.grater.multiplier * clickUpgrades.grater.quantity;
+// clickUpgrades.grater.multiplier * clickUpgrades.grater.quantity;
+// clickUpgrades.grater.multiplier * clickUpgrades.grater.quantity +
+// clickUpgrades.melter.multiplier * clickUpgrades.melter.quantity;
 function mine() {
   cheese +=
     1 +
@@ -76,7 +79,8 @@ function buyPickAxe() {
   clickUpgrades.pickaxes.quantity += 1;
   cheese -= clickUpgrades.pickaxes.price;
   clickUpgrades.pickaxes.price += 10;
-  perClick;
+  perClick +=
+    clickUpgrades.pickaxes.quantity + clickUpgrades.pickaxes.multiplier - 1;
   update();
 }
 function buyGrater() {
@@ -88,6 +92,8 @@ function buyGrater() {
   console.log("here");
   cheese -= clickUpgrades.grater.price;
   clickUpgrades.grater.price += 10;
+  perClick +=
+    clickUpgrades.grater.multiplier + clickUpgrades.grater.quantity - 1;
   update();
 }
 function buyMelter() {
