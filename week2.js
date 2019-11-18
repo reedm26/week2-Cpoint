@@ -29,9 +29,10 @@ let perClick =
   1 +
   clickUpgrades.pickaxes.multiplier * clickUpgrades.pickaxes.quantity +
   clickUpgrades.grater.multiplier * clickUpgrades.grater.quantity;
+clickUpgrades.melter.multiplier * clickUpgrades.melter.quantity;
+
 // clickUpgrades.grater.multiplier * clickUpgrades.grater.quantity;
 // clickUpgrades.grater.multiplier * clickUpgrades.grater.quantity +
-// clickUpgrades.melter.multiplier * clickUpgrades.melter.quantity;
 function mine() {
   cheese +=
     1 +
@@ -104,6 +105,8 @@ function buyMelter() {
   clickUpgrades.melter.quantity += 1;
   cheese -= clickUpgrades.melter.price;
   clickUpgrades.melter.price += 50;
+  perClick +=
+    clickUpgrades.melter.multiplier + clickUpgrades.melter.quantity - 1;
   update();
 }
 function buyRover() {
